@@ -1,42 +1,40 @@
 <template>
   <div>
     <nav>
-      <div class="logo"
-           @click="$router.push('/')">
-        <img v-if="navBg === 'default'"
-             src="../assets/img/logo.png"
-             alt="logo" />
-        <img v-else
-             src="../assets/img/logo__other.png"
-             alt="logo" />
+      <div class="logo" @click="$router.push('/')">
+        <img src="../assets/img/logo.png" alt="logo" />
+        <!-- <img v-else src="../assets/img/logo__other.png" alt="logo" /> -->
       </div>
       <div class="navtab">
         <!-- @mouseleave="navbghide(item)" -->
-        <div class="navtb__nomal"
-             v-for="(item, index) in navList"
-             :key="index"
-             :class="{
+        <div
+          class="navtb__nomal"
+          v-for="(item, index) in navList"
+          :key="index"
+          :class="{
             navtabbg: item.navtabFlag == true,
             dotFlag: item.dotFlag == true,
             color__bg: navBg !== 'default',
             color__bg_default: navBg === 'default'
           }"
-             @mouseover="navTabbgchange(item, index)"
-             @click.stop="goMainpage(item, index)">
+          @mouseover="navTabbgchange(item, index)"
+          @click.stop="goMainpage(item, index)"
+        >
           {{ item.nav }}
-          <div class="navtb__pulldown"
-               v-show="item.subList">
-            <p v-show="item.navtabFlag == true"
-               v-for="(subItem, index) in item.subList"
-               :key="index"
-               :class="{
+          <div class="navtb__pulldown" v-show="item.subList">
+            <p
+              v-show="item.navtabFlag == true"
+              v-for="(subItem, index) in item.subList"
+              :key="index"
+              :class="{
                 navtabbg__sub: subItem.navtabFlag == true,
                 color__sub: navBg !== 'default',
                 color__sub_default: navBg === 'default'
               }"
-               @mouseover="navSubbgchange(subItem, index)"
-               @mouseleave="navSubbghide(subItem)"
-               @click.stop.prevent="goSubpage(subItem)">
+              @mouseover="navSubbgchange(subItem, index)"
+              @mouseleave="navSubbghide(subItem)"
+              @click.stop.prevent="goSubpage(subItem)"
+            >
               {{ subItem.aboutCompany }}
             </p>
           </div>
@@ -44,8 +42,7 @@
         </div>
       </div>
       <div class="empty">
-        <img src="../assets/img/search__pic.png"
-             alt="搜索" />
+        <!-- <img src="../assets/img/search__pic.png" alt="搜索" /> -->
       </div>
     </nav>
   </div>
@@ -58,7 +55,7 @@ export default {
     //   default: []
     // }
   },
-  data () {
+  data() {
     return {
       navBg: "default",
       navList: [
@@ -68,93 +65,49 @@ export default {
           dotFlag: false
         },
         {
-          nav: "关于启誉",
+          nav: "馥薇品牌",
           navtabFlag: false,
-          dotFlag: false,
-          subList: [
-            {
-              aboutCompany: "公司简介"
-            },
-            {
-              aboutCompany: "发展战略"
-            },
-            {
-              aboutCompany: "发展历程"
-            },
-            {
-              aboutCompany: "组织架构"
-            },
-            {
-              aboutCompany: "企业文化"
-            },
-            {
-              aboutCompany: "资质荣誉"
-            }
-          ]
+          dotFlag: false
         },
         {
-          nav: "项目服务",
+          nav: "护肤产品",
           navtabFlag: false,
-          dotFlag: false,
-          subList: [
-            {
-              aboutCompany: "生殖服务"
-            },
-            {
-              aboutCompany: "专家分析"
-            },
+          dotFlag: false
+          // subList: [
+          //   {
+          //     aboutCompany: "公司简介"
+          //   },
+          //   {
+          //     aboutCompany: "发展战略"
+          //   },
+          //   {
+          //     aboutCompany: "发展历程"
+          //   },
+          //   {
+          //     aboutCompany: "组织架构"
+          //   },
+          //   {
+          //     aboutCompany: "企业文化"
+          //   }
+          // ]
+        },
+        // {
+        //   nav: "我们",
+        //   navtabFlag: false,
+        //   dotFlag: false
 
-            {
-              aboutCompany: "养生服务"
-            },
-            {
-              aboutCompany: "面霜服务"
-            },
-            {
-              aboutCompany: "活动合作"
-            }
-          ]
-        },
+        // },
         {
-          nav: "新闻中心",
-          navtabFlag: false,
-          dotFlag: false,
-          subList: [
-            {
-              aboutCompany: "公司要闻"
-            },
-            {
-              aboutCompany: "产业新闻"
-            },
-            {
-              aboutCompany: "媒体关注"
-            }
-          ]
-        },
-        {
-          nav: "人才战略",
-          navtabFlag: false,
-          dotFlag: false,
-          subList: [
-            {
-              aboutCompany: "人才理念"
-            },
-            {
-              aboutCompany: "人才招聘"
-            }
-          ]
-        },
-        {
-          nav: "联络启誉",
+          nav: "会员权益",
           navtabFlag: false,
           dotFlag: false
         }
       ]
     };
   },
-  beforeCreate () { },
-  created () { },
-  mounted () {
+  beforeCreate() {},
+  created() {},
+  mounted() {
     const navName = this.$router.history.current.meta.navName;
     this.$nextTick(() => {
       this.navList.forEach((item, index) => {
@@ -168,9 +121,9 @@ export default {
     });
     this.navBg = this.$router.history.current.meta.navBg;
   },
-  destroyed () { },
+  destroyed() {},
   methods: {
-    navTabbgchange (_itemData, _index) {
+    navTabbgchange(_itemData, _index) {
       _itemData.navtabFlag = true;
       this.navList.forEach((item, index) => {
         if (_index == index) {
@@ -181,13 +134,13 @@ export default {
         return item;
       });
     },
-    navbghide (_itemData) {
+    navbghide(_itemData) {
       this.navList.forEach((item, index) => {
         item.navtabFlag = false;
         return item;
       });
     },
-    navSubbgchange (_itemData, _index) {
+    navSubbgchange(_itemData, _index) {
       _itemData.navtabFlag = true;
       this.navList.forEach((item, index) => {
         if (item.subList) {
@@ -208,24 +161,7 @@ export default {
         this.navList;
       });
     },
-    goSubpage (_itemData) {
-      // let dotIndex
-      // this.navList.forEach((item, index) => {
-      //   if (item.subList) {
-      //     item.subList.forEach((subItem, subIndex) => {
-      //       if (_itemData.aboutCompany === subItem.aboutCompany) {
-      //         dotIndex = index
-      //       }
-      //     })
-      //   }
-      //   if (index === dotIndex) {
-      //     this.$set(item, 'dotFlag', true)
-      //   } else {
-      //     this.$set(item, 'dotFlag', false)
-      //   }
-      //   return item
-      // })
-      // localStorage.setItem('nav-list-state', JSON.stringify(this.navList))
+    goSubpage(_itemData) {
       switch (_itemData.aboutCompany) {
         case "公司简介":
           this.gotoPage("/about/AboutContent", "2");
@@ -280,7 +216,7 @@ export default {
       }
       return false;
     },
-    gotoPage (path, index = 1) {
+    gotoPage(path, index = 1) {
       if (this.$router.currentRoute.path == path) {
         this.$emit("deputyCall", index);
       } else {
@@ -292,7 +228,7 @@ export default {
         });
       }
     },
-    goMainpage (_itemData, _index) {
+    goMainpage(_itemData, _index) {
       // this.$set(_itemData, 'dotFlag', true)
       // this.navList.forEach((item, index) => {
       //   if (_index === index) {
@@ -309,6 +245,11 @@ export default {
             path: "/"
           });
           break;
+        case "馥薇品牌":
+          this.$router.push({
+            path: "/Fuwei/FufeiMain"
+          });
+          break;
         case "新闻中心":
           this.$router.push({
             path: "/NewsCenter/NewsCenterMain"
@@ -319,24 +260,24 @@ export default {
             path: "/ProductService/ProductServiceMain"
           });
           break;
-        case "人才战略":
+        // case "我们":
+        //   this.$router.push({
+        //     path: "/Friends/FriendsMain"
+        //   });
+        //   break;
+        case "会员权益":
           this.$router.push({
-            path: "/TalentsPlan/TalentsPlanMain"
+            path: "/Membership/MembershipMain"
           });
           break;
-        case "联络启誉":
-          this.$router.push({
-            path: "/ContactCompany/ContactCompanyMain"
-          });
-          break;
-        case "关于启誉":
+        case "护肤产品":
           this.$router.push({
             path: "/about"
           });
           break;
       }
     },
-    navSubbghide (_itemData) {
+    navSubbghide(_itemData) {
       this.navList.forEach((item, index) => {
         item.navtabFlag = false;
         return item;
@@ -347,14 +288,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 nav {
-  position: absolute;
-  display: flex;
-  top: 0;
+  // position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  display: flex;
+  // top: 0;
   z-index: 99;
   height: 70px;
   font-size: 16px;
-  border-bottom: 1px solid rgb(109, 93, 103);
+  background: #fff;
+  z-index: 999;
+  // border-bottom: 1px solid rgb(109, 93, 103);
   // background-color: rgb(121, 66, 19);
   .logo {
     flex: 0 0 40%;
@@ -371,7 +316,7 @@ nav {
     color: #333;
   }
   .color__bg_default {
-    color: #fff;
+    // color: #fff;
   }
 
   .navtab {
@@ -384,6 +329,7 @@ nav {
       flex: 1;
       height: 100%;
       line-height: 75px;
+      font-weight: bold;
       cursor: pointer;
       .navtb__pulldown {
         width: 100%;
@@ -407,13 +353,12 @@ nav {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -5px;
+        bottom: 12px;
         margin: 0 auto;
         content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #333;
+        width: 44px;
+        height: 3px;
+        background: #0073e5;
       }
     }
     .dotFlag.color__bg_default {
@@ -423,13 +368,12 @@ nav {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -5px;
+        bottom: 12px;
         margin: 0 auto;
         content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #fff;
+        width: 44px;
+        height: 3px;
+        background: #0073e5;
       }
     }
     .navtabbg.color__bg {
@@ -439,13 +383,12 @@ nav {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -5px;
+        bottom: 12px;
         margin: 0 auto;
         content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #333;
+        width: 44px;
+        height: 3px;
+        background: #0073e5;
       }
     }
     .navtabbg.color__bg_default {
@@ -455,12 +398,11 @@ nav {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -5px;
+        bottom: 12px;
         margin: 0 auto;
         content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
+        width: 44px;
+        height: 3px;
         background: #fff;
       }
     }

@@ -1,7 +1,8 @@
 <template>
   <div>
+    <btm-entry></btm-entry>
     <footer class="location">
-      <em class="center__sign"></em>
+      <!-- <em class="center__sign"></em> -->
       <div class="location__inner">
         <div class="location__left">
           <div class="way" v-show="footerStyle === 'more'">
@@ -12,7 +13,7 @@
             <img src="../assets/img/wei__chart.png"
                  alt="微信" /> -->
           </div>
-          <div class="location__map" v-show="footerStyle === 'more'">
+          <div class="location__map" v-if="footerStyle === 'more'">
             <div id="location__pic"></div>
             <!-- <img class="location__pic"
                  src="../assets/img/location.png"
@@ -25,39 +26,38 @@
             <div class="location__common">
               <img src="../assets/img/location__sign.png" alt />
               <p>
-                总部办公地址：南宁市青秀东盟商务区中柬路8号龙光世纪B塔28062811室
+                总部办公地址：广州市海珠区江南大道中82号802房(仅限办公用途)
               </p>
             </div>
-            <div class="location__common">
+            <!-- <div class="location__common">
               <img src="../assets/img/location__sign.png" alt />
               <p>研发中心地址：</p>
-            </div>
+            </div> -->
             <div class="location__common">
               <img src="../assets/img/email__sign.png" alt />
-              <p>邮箱：</p>
-              <!-- Cinhrd@cinhrd.com -->
+              <p>邮箱：fuwei_yx@163.com</p>
             </div>
             <div class="location__common">
               <img src="../assets/img/phone__sign.png" alt />
-              <p>服务热线：0755-33525764</p>
+              <p>服务热线：18530808342</p>
             </div>
             <div class="location__common">
               <img src="../assets/img/banquan__sign.png" alt />
               <p>
-                <a href="http://www.beian.miit.gov.cn/"
-                  >版权所有：南宁市市启誉启誉美容服务有限公司豫ICP备19045060号-1
-                  <!--粤ICP备19139745号-->
+                <a href="http://www.beian.miit.gov.cn/">
+                  版权所有：
+                  <!-- 南宁市市馥薇馥薇美容服务有限公司豫ICP备19045060号-1 -->
                 </a>
               </p>
             </div>
           </div>
           <div class="location__QRcode" v-show="footerStyle === 'more'">
-            <img
+            <!-- <img
               class="QRcode__pic"
               src="../assets/img/QR_code.png"
               alt="二维码"
             />
-            <p>扫一扫 关注启誉启誉</p>
+            <p>扫一扫 关注馥薇馥薇</p> -->
           </div>
         </div>
         <!-- <div class="location__QRcode_less" v-show="footerStyle !== 'more'">
@@ -66,15 +66,15 @@
             src="../assets/img/QR_code.png"
             alt="二维码"
           />
-          <p>扫一扫 关注启誉启誉</p>
+          <p>扫一扫 关注馥薇馥薇</p>
         </div> -->
-        <div class="location__right" v-show="footerStyle === 'more'">
+        <!-- <div class="location__right" v-show="footerStyle === 'more'">
           <p class="suggest">
             <img src="../assets/img/suggess__sign.png" alt />
             投诉建议
           </p>
           <p class="suggest__text">
-            感谢您对启誉启誉的关注，您可以填写下表，反馈问题或意见。
+            感谢您对馥薇馥薇的关注，您可以填写下表，反馈问题或意见。
           </p>
           <p class="suggest__text">
             我们在收到您的留言后，会第一时间和您联系。
@@ -105,10 +105,10 @@
             <p class="suggest__left">联系方式</p>
             <input type="text" />
           </div>
-          <!-- <div class="suggest__emal">
+          <div class="suggest__emal">
             <p class="suggest__left">邮箱</p>
             <input type="text" />
-          </div> -->
+          </div>
           <div class="suggest__area">
             <img class="area__one" src="../assets/img/btm__sign.png" alt />
             <img class="area__two" src="../assets/img/btm__sign.png" alt />
@@ -129,7 +129,7 @@
             提交信息
             <img src="../assets/img/more__sign.png" alt="更多" />
           </div>
-        </div>
+        </div> -->
         <!-- <div class="float__sign">
           <img src="../assets/img/float__share.png"
                alt />
@@ -145,6 +145,8 @@
 </template>
 <script>
 // import BMap from "BMap";
+import BtmEntry from "@/components/BtmEntry";
+
 export default {
   data() {
     return {
@@ -154,19 +156,20 @@ export default {
     };
   },
   props: {},
+  components: {
+    BtmEntry
+  },
   created() {
     this.footerStyle = this.$router.history.current.meta.footerStyle;
   },
   mounted() {
-    if (this.footerStyle === "more") {
-      var map = new BMap.Map("location__pic"); // 创建地图实例
-      console.log(map);
-      var point = new BMap.Point(114.064328, 22.735422); // 创建点坐标
-      var marker = new BMap.Marker(point); // 创建标注
-      map.addOverlay(marker); // 将标注添加到地图中
-      map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别
-      map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-    }
+    var map = new BMap.Map("location__pic"); // 创建地图实例
+    console.log("!!!!!!!!!!", map);
+    var point = new BMap.Point(114.064328, 22.735422); // 创建点坐标
+    var marker = new BMap.Marker(point); // 创建标注
+    map.addOverlay(marker); // 将标注添加到地图中
+    map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
   },
   methods: {
     backTop() {
@@ -180,8 +183,8 @@ export default {
   position: relative;
   display: flex;
   font-size: 12px;
-  padding: 60px 0 40px;
-  background-color: rgb(38, 35, 48);
+  padding: 60px 3% 40px;
+  background-color: #322c27;
   color: #999;
   .center__sign {
     width: 30px;
@@ -212,15 +215,15 @@ export default {
           margin-right: 10px;
         }
       }
-      .location__map {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        #location__pic {
-          width: 450px;
-          height: 175px;
-        }
-      }
+      // .location__map {
+      //   display: flex;
+      //   justify-content: space-between;
+      //   align-items: center;
+      //   #location__pic {
+      //     width: 450px;
+      //     height: 175px;
+      //   }
+      // }
       .location__so_less {
         margin-top: 0 !important;
       }

@@ -1,14 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
 import IndexMain from "@/views/index/IndexMain";
+import FufeiMain from "@/views/Fuwei/FufeiMain";
 import homePage from "@/views/Home";
 import About from "@/views/about/AboutMain";
 import AboutContent from "@/views/about/AboutContent";
+import ProductDetail from "@/views/about/ProductDetail";
+import HelpQuestion from "@/views/HelpQuestion/HelpQuestionMain";
 import CooperationCaseMain from "@/views/CooperationCase/CooperationCaseMain";
-import ContactCompanyMain from "@/views/ContactCompany/ContactCompanyMain";
-import TalentsPlanMain from "@/views/TalentsPlan/TalentsPlanMain";
-import TalentsPlanmind from "@/views/TalentsPlan/TalentsPlanmind";
-import NewsCenterMain from "@/views/NewsCenter/NewsCenterMain";
+import MembershipMain from "@/views/Membership/MembershipMain";
+import FriendsMain from "@/views/Friends/FriendsMain";
 import ProductServiceMain from "@/views/ProductService/ProductServiceMain";
 Vue.use(Router);
 
@@ -30,13 +31,23 @@ var router = new Router({
           }
         },
         {
+          path: "Fuwei/FufeiMain",
+          name: "FufeiMain",
+          component: FufeiMain,
+          meta: {
+            navBg: "white",
+            footerStyle: "less",
+            navName: "馥薇品牌"
+          }
+        },
+        {
           path: "/about",
           name: "about",
           component: About,
           meta: {
             navBg: "white",
             footerStyle: "less",
-            navName: "关于启誉"
+            navName: "关于馥薇"
           }
         },
         {
@@ -46,9 +57,31 @@ var router = new Router({
           meta: {
             navBg: "white",
             footerStyle: "less",
-            navName: "关于启誉"
+            navName: "护肤产品"
           }
         },
+
+        {
+          path: "/about/ProductDetail",
+          name: "ProductDetail",
+          component: ProductDetail,
+          meta: {
+            navBg: "white",
+            footerStyle: "less",
+            navName: "产品详情"
+          }
+        },
+        {
+          path: "/HelpQuestion/HelpQuestionMain",
+          name: "HelpQuestion",
+          component: HelpQuestion,
+          meta: {
+            navBg: "white",
+            footerStyle: "less",
+            navName: "帮助中心"
+          }
+        },
+
         {
           path: "/CooperationCase/CooperationCaseMain",
           name: "CooperationCaseMain",
@@ -59,45 +92,26 @@ var router = new Router({
           }
         },
         {
-          path: "/ContactCompany/ContactCompanyMain",
-          name: "ContactCompanyMain",
-          component: ContactCompanyMain,
+          path: "/Membership/MembershipMain",
+          name: "MembershipMain",
+          component: MembershipMain,
           meta: {
             navBg: "white",
             footerStyle: "less",
-            navName: "联络启誉"
+            navName: "会员权益"
           }
         },
         {
-          path: "/TalentsPlan/TalentsPlanMain",
-          name: "TalentsPlanMain",
-          component: TalentsPlanMain,
+          path: "/Friends/FriendsMain",
+          name: "FriendsMain",
+          component: FriendsMain,
           meta: {
             navBg: "white",
             footerStyle: "less",
-            navName: "人才战略"
+            navName: "员工"
           }
         },
-        {
-          path: "/TalentsPlan/TalentsPlanmind",
-          name: "TalentsPlanmind",
-          component: TalentsPlanmind,
-          meta: {
-            navBg: "white",
-            footerStyle: "less",
-            navName: "人才战略"
-          }
-        },
-        {
-          path: "/NewsCenter/NewsCenterMain",
-          name: "NewsCenterMain",
-          component: NewsCenterMain,
-          meta: {
-            navBg: "white",
-            footerStyle: "less",
-            navName: "新闻中心"
-          }
-        },
+
         {
           path: "/ProductService/ProductServiceMain",
           name: "ProductServiceMain",

@@ -24,6 +24,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
+.container,
+.page-container {
+  margin-top: 70px;
+  background: url("./assets/img/bg-dark.jpg") repeat #213429;
+}
 </style>
 <style lang="scss" src="./assets/style/base.scss"></style>
 <style lang="scss" src="./assets/style/common.scss"></style>

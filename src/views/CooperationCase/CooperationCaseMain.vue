@@ -6,73 +6,26 @@
         <div class="company__sign"></div>
         <div class="nav_Main">
           <ul>
-            <li :class="{'on':tabNub=='1'}" @click="trggerTab('1')">置业服务</li>
-            <li :class="{'on':tabNub=='2'}" @click="trggerTab('2')">定制服务</li>
-            <li :class="{'on':tabNub=='3'}" @click="trggerTab('3')">智慧园区</li>
-            <li :class="{'on':tabNub=='4'}" @click="trggerTab('4')">灵活用工</li>
+            <li :class="{ on: tabNub == '1' }" @click="trggerTab('1')">
+              面霜服务
+            </li>
+            <li :class="{ on: tabNub == '2' }" @click="trggerTab('2')">
+              养生服务
+            </li>
+            <li :class="{ on: tabNub == '3' }" @click="trggerTab('3')">
+              生殖服务
+            </li>
+            <li :class="{ on: tabNub == '4' }" @click="trggerTab('4')">
+              活动合作
+            </li>
           </ul>
         </div>
       </div>
       <div class="about_value">
-        <h4>首页 > 合作案例 > {{navTabData[tabNub]}}</h4>
-        <div class="content1" v-if="tabNub=='1'">
+        <h4>首页 > 合作案例 > {{ navTabData[tabNub] }}</h4>
+        <div class="content1" v-if="tabNub == '1'">
           <div class="img_box">
-            <ul class="clearfix">
-              <li>
-                <img src="./assets/img/case_img1.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img2.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img3.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img4.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img5.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img6.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img7.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img8.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img1.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img1.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img2.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img3.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img1.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img2.png" alt />
-              </li>
-              <li>
-                <img src="./assets/img/case_img3.png" alt />
-              </li>
-            </ul>
-          </div>
-          <div class="page_tab_box">
-            <i class="before"><</i>
-            <ul>
-              <li class="on">1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
-            <i class="after">></i>
+            <ul class="clearfix"></ul>
           </div>
         </div>
       </div>
@@ -93,10 +46,10 @@ export default {
     return {
       tabNub: "1",
       navTabData: {
-        "1": "置业服务",
-        "2": "定制服务",
-        "3": "智慧园区",
-        "4": "灵活用工"
+        "1": "面霜服务",
+        "2": "养生服务",
+        "3": "生殖服务",
+        "4": "活动合作"
       }
     };
   },
@@ -116,14 +69,14 @@ export default {
 <style scoped lang="scss">
 .page-container {
   width: 100%;
-  margin-top: 20px;
+  // margin-top: 20px;
   .section {
     width: 1190px;
     margin: 0 auto;
     background: rgba(237, 237, 237, 0.34);
     padding: 15px;
     margin-bottom: 20px;
-    margin-top: 100px;
+    // margin-top: 100px;
     .about_describe {
       position: relative;
       float: left;
@@ -131,7 +84,7 @@ export default {
       .company__sign {
         width: 250px;
         height: 100px;
-        background: url("./assets/img/tit_2.png") no-repeat;
+        // background: url("./assets/img/tit_2.png") no-repeat;
         background-size: contain;
         margin-bottom: 30px;
         margin-top: 15px;
@@ -245,4 +198,3 @@ export default {
   }
 }
 </style>
- 

@@ -42,15 +42,15 @@ export default {
   },
   methods: {
     handleScroll() {
-      const companyAnimate1 = document.getElementsByClassName(
-        "company__content_english"
-      )[0];
-      const companyAnimate2 = document.getElementsByClassName(
-        "company__content_describe"
-      )[0];
-      const talentAnimate = document.getElementsByClassName(
-        "talent__content"
-      )[0];
+      // const companyAnimate1 = document.getElementsByClassName(
+      //   "company__content_english"
+      // )[0];
+      // const companyAnimate2 = document.getElementsByClassName(
+      //   "company__content_describe"
+      // )[0];
+      // const talentAnimate = document.getElementsByClassName(
+      //   "talent__content"
+      // )[0];
       var scrollTop =
         window.pageXOffset ||
         document.documentElement.scrollTop ||
@@ -60,18 +60,18 @@ export default {
       } else {
         this.backFlag = false;
       }
-      if (scrollTop > 600 && scrollTop < 1300) {
-        companyAnimate1.classList.add("lightSpeedIn");
-        companyAnimate2.classList.add("lightSpeedIn");
-      } else {
-        companyAnimate1.classList.remove("lightSpeedIn");
-        companyAnimate2.classList.remove("lightSpeedIn");
-      }
-      if (scrollTop > 3000 && scrollTop < 4500) {
-        talentAnimate.classList.add("rollIn");
-      } else {
-        talentAnimate.classList.remove("rollIn");
-      }
+      // if (scrollTop > 600 && scrollTop < 1300) {
+      //   companyAnimate1.classList.add("lightSpeedIn");
+      //   companyAnimate2.classList.add("lightSpeedIn");
+      // } else {
+      //   companyAnimate1.classList.remove("lightSpeedIn");
+      //   companyAnimate2.classList.remove("lightSpeedIn");
+      // }
+      // if (scrollTop > 3000 && scrollTop < 4500) {
+      //   talentAnimate.classList.add("rollIn");
+      // } else {
+      //   talentAnimate.classList.remove("rollIn");
+      // }
     },
     backTop() {
       // window.document.documentElement.scrollTop = 0;
@@ -102,9 +102,11 @@ export default {
   z-index: 99;
   img {
     display: inline-block;
-    width: 60px;
+    padding: 10px;
+    width: 50px;
     margin-top: 5px;
     cursor: pointer;
+    background: #fff;
   }
 }
 </style>
