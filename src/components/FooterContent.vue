@@ -142,7 +142,14 @@
       <p class="copyright">
         Copyright © 2021 qiyufuwei.com, All Rights Reserved
       </p>
+
       <p class="keepon-record">
+        <span
+          class="certificates"
+          @click="$router.push('Certificates/Certificates')"
+          >生产许可证</span
+        >
+        &nbsp;|&nbsp;
         <a href="https://beian.miit.gov.cn">
           备案号： 粤ICP备2021008787号
         </a>
@@ -515,6 +522,9 @@ export default {
   }
   .copyright {
     text-align: center;
+  }
+  .certificates {
+    cursor: pointer;
   }
   .keepon-record {
     margin-top: 15px;

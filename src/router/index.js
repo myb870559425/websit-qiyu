@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import IndexMain from "@/views/index/IndexMain";
 import FufeiMain from "@/views/Fuwei/FufeiMain";
+import Certificates from "@/views/Certificates/Certificates";
 import homePage from "@/views/Home";
 import About from "@/views/about/AboutMain";
 import AboutContent from "@/views/about/AboutContent";
@@ -37,6 +38,16 @@ var router = new Router({
             navBg: "white",
             footerStyle: "less",
             navName: "馥薇品牌"
+          }
+        },
+        {
+          path: "Certificates/Certificates",
+          name: "Certificates",
+          component: Certificates,
+          meta: {
+            navBg: "white",
+            footerStyle: "less",
+            navName: "生产许可证"
           }
         },
         {
