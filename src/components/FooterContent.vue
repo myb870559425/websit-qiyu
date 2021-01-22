@@ -44,9 +44,8 @@
             <div class="location__common">
               <img src="../assets/img/banquan__sign.png" alt />
               <p>
-                <a href="http://www.beian.miit.gov.cn/">
-                  版权所有：
-                  <!-- 南宁市市馥薇馥薇美容服务有限公司豫ICP备19045060号-1 -->
+                <a href="https://beian.miit.gov.cn">
+                  版权所有：广州馥薇生物科技有限公司
                 </a>
               </p>
             </div>
@@ -140,6 +139,14 @@
                alt />
         </div> -->
       </div>
+      <p class="copyright">
+        Copyright © 2021 qiyufuwei.com, All Rights Reserved
+      </p>
+      <p class="keepon-record">
+        <a href="https://beian.miit.gov.cn">
+          备案号： 粤ICP备2021008787号
+        </a>
+      </p>
     </footer>
   </div>
 </template>
@@ -160,7 +167,7 @@ export default {
     BtmEntry
   },
   created() {
-    this.footerStyle = this.$router.history.current.meta.footerStyle;
+    // this.footerStyle = this.$router.history.current.meta.footerStyle;
   },
   mounted() {
     var map = new BMap.Map("location__pic"); // 创建地图实例
@@ -182,8 +189,9 @@ export default {
 .location {
   position: relative;
   display: flex;
+  flex-direction: column;
   font-size: 12px;
-  padding: 60px 3% 40px;
+  padding: 30px 3% 40px;
   background-color: #322c27;
   color: #999;
   .center__sign {
@@ -503,6 +511,16 @@ export default {
         margin-top: 5px;
         cursor: pointer;
       }
+    }
+  }
+  .copyright {
+    text-align: center;
+  }
+  .keepon-record {
+    margin-top: 15px;
+    text-align: center;
+    a {
+      color: #999;
     }
   }
 }

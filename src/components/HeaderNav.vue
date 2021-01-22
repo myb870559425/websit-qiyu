@@ -90,18 +90,18 @@ export default {
           //     aboutCompany: "企业文化"
           //   }
           // ]
-        },
+        }
         // {
         //   nav: "我们",
         //   navtabFlag: false,
         //   dotFlag: false
 
         // },
-        {
-          nav: "会员权益",
-          navtabFlag: false,
-          dotFlag: false
-        }
+        // {
+        //   nav: "会员权益",
+        //   navtabFlag: false,
+        //   dotFlag: false
+        // }
       ]
     };
   },

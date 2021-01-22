@@ -441,6 +441,7 @@ html {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         z-index: 99;
         .sign_new {
+         
           display: inline-block;
           padding: 5px 14px 7px 15px;
           background: #103821;
@@ -448,6 +449,7 @@ html {
           margin-bottom: 6px;
           text-align: center;
           border-radius: 2px;
+          border-radius: 50%;
         }
         .sign_sale {
           display: inline-block;
@@ -457,6 +459,7 @@ html {
           margin-bottom: 6px;
           text-align: center;
           border-radius: 2px;
+          border-radius: 50%;
         }
         .sign_best {
           display: inline-block;
@@ -466,6 +469,7 @@ html {
           margin-bottom: 6px;
           text-align: center;
           border-radius: 2px;
+          border-radius: 50%;
         }
       }
       .main_item_pic-wrap {
