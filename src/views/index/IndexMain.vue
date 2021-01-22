@@ -38,7 +38,7 @@
     </section>
     <section class="main_inner bg_dark">
       <div class="main_inner_bg">
-        <img src="./assets/img/organic-bg.jpg" alt="" />
+        <!-- <img src="./assets/img/organic-bg.jpg" alt="" /> -->
       </div>
     </section>
     <section
@@ -53,7 +53,7 @@
       <div class="skin__mask-descript">
         <div class="mask_pic_wrap">
           <p class="mask-sale">
-            线上小程序售卖
+            线上小程序预售
           </p>
           <img src="./assets/img/mask-1.jpg" alt="" class="mask_pic" />
         </div>
@@ -372,7 +372,7 @@ html {
   display: flex;
   z-index: 999;
   // height: 680px;
-  background: #fff;
+  // background: #fff;
   img {
     width: 100%;
   }
@@ -430,6 +430,7 @@ html {
       position: relative;
       overflow: hidden;
       background: #fff;
+      border-radius: 8px;
       .sign__wrap {
         position: absolute;
         display: flex;
@@ -441,7 +442,6 @@ html {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         z-index: 99;
         .sign_new {
-         
           display: inline-block;
           padding: 5px 14px 7px 15px;
           background: #103821;
