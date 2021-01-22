@@ -7,7 +7,6 @@ import About from "@/views/about/AboutMain";
 import AboutContent from "@/views/about/AboutContent";
 import ProductDetail from "@/views/about/ProductDetail";
 import HelpQuestion from "@/views/HelpQuestion/HelpQuestionMain";
-import CooperationCaseMain from "@/views/CooperationCase/CooperationCaseMain";
 import MembershipMain from "@/views/Membership/MembershipMain";
 import FriendsMain from "@/views/Friends/FriendsMain";
 import ProductServiceMain from "@/views/ProductService/ProductServiceMain";
@@ -79,16 +78,6 @@ var router = new Router({
             navBg: "white",
             footerStyle: "less",
             navName: "帮助中心"
-          }
-        },
-
-        {
-          path: "/CooperationCase/CooperationCaseMain",
-          name: "CooperationCaseMain",
-          component: CooperationCaseMain,
-          meta: {
-            navBg: "white",
-            footerStyle: "less"
           }
         },
         {
