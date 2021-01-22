@@ -430,7 +430,6 @@ html {
       position: relative;
       overflow: hidden;
       background: #fff;
-      border-radius: 8px;
       .sign__wrap {
         position: absolute;
         display: flex;
