@@ -24,6 +24,23 @@
         <p class="standards">规格: {{ prodDetail.prodStandards }}</p>
       </div>
     </div>
+    <div
+      class="mianmo-detail"
+      v-show="prodDetail.id === '1' && prodDetail.type === 'mianmo'"
+    >
+      <img src="./assets/img/mianmo-1.png" alt="面膜" />
+      <img src="./assets/img/mianmo-2.png" alt="面膜" />
+      <img src="./assets/img/mianmo-3.png" alt="面膜" />
+      <img src="./assets/img/mianmo-4.png" alt="面膜" />
+      <img src="./assets/img/mianmo-5.png" alt="面膜" />
+      <img src="./assets/img/mianmo-6.png" alt="面膜" />
+      <img src="./assets/img/mianmo-7.png" alt="面膜" />
+      <img src="./assets/img/mianmo-8.png" alt="面膜" />
+      <img src="./assets/img/mianmo-9.png" alt="面膜" />
+      <img src="./assets/img/mianmo-10.png" alt="面膜" />
+      <img src="./assets/img/mianmo-11.png" alt="面膜" />
+      <img src="./assets/img/mianmo-12.png" alt="面膜" />
+    </div>
     <footer-content></footer-content>
   </div>
 </template>
@@ -70,6 +87,7 @@ export default {
     height: 400px;
     border: 1px solid #fff;
     background: #fff;
+    border-radius: 4px;
     img {
       position: absolute;
       width: 350px;
@@ -114,6 +132,16 @@ export default {
       right: 10%;
       opacity: 0.5;
     }
+  }
+}
+.mianmo-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  img {
+    width: 70%;
   }
 }
 </style>

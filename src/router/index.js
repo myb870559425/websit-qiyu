@@ -14,6 +14,7 @@ import ProductServiceMain from "@/views/ProductService/ProductServiceMain";
 Vue.use(Router);
 
 var router = new Router({
+  mode: "history",
   routes: [
     {
       path: "/",

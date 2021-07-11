@@ -15,15 +15,9 @@
                   <span class="time_info"></span>
                 </h6>
                 <p>
-                  馥薇是由法国ACTIVEN生物药理实验室与瑞士REMORA美容健康中心，
-                  共同创建于2009年的新型生物科技研发机构，
-                  该生物药理研发中心专攻于生物技术与毒素药理的运用，
-                  在生物智能化、肽工程、毒素临床研发等领域处于全球领导地位。
-                  基于长期合作关系，
-                  2013年广州馥薇生物科技公司与法国ACTIVEN生物药理研发中心达成战略伙伴关系，
-                  2015年共同成立广州馥薇生物科技有限公司共同开发中国大陆市场，
-                  全权授权广州盛立生物科技有限公司生产【馥薇】专业美容品牌。
-                  2016年8月湖南运营管理中心正式成立。
+                  馥薇，源于信赖，服务于心，真诚的跟客户做交流。让产品讲真话，让客户更明白的做选择。
+                  我能帮助更多的你，我们会非常欣慰，以此作为目标和动力，来更好的服务于大家。如果适合你，只需要给一次相信我们的机会，我们必会全力以赴。健康的美丽，自在的生活。
+                  2015年成立广州馥薇生物科技有限公司，全权授权广州盛立生物科技有限公司生产【馥薇】专业美容品牌。 2016年8月湖南运营管理中心正式成立。
                 </p>
               </li>
             </ul>
@@ -36,21 +30,24 @@
       <p class="grow_en">GROWTH PROCESS</p>
       <div class="grow__line">
         <div class="line">
-          <p class="stemp-6">
+          <!--<p class="stemp-6">
             2013年广州馥薇生物科技公司与法国ACTIVEN生物药理研发中心达成战略伙伴关系
-          </p>
-          <p class="stemp-5">
-            2015年与法国ACTIVEN生物药理研发中心共同成立广州馥薇生物科技有限公司共同开发中国大陆市场
-          </p>
-          <p class="stemp-4">
-            2015年共同成立广州馥薇生物科技有限公司共同开发中国大陆市场，
+          </p>-->
+          <!--<p class="stemp-5">
+             2015年与法国ACTIVEN生物药理研发中心共同成立广州馥薇生物科技有限公司共同开发中国大陆市场
+          </p>-->
+          <!--<p class="stemp-4">
+             2015年共同成立广州馥薇生物科技有限公司共同开发中国大陆市场，
             全权授权广州盛立生物科技有限公司生产【馥薇】专业美容品牌。
-          </p>
-          <p class="stemp-3">
+          </p>-->
+          <p class="stemp-4">
             2016年8月湖南运营管理中心正式成立。
           </p>
-          <p class="stemp-2">
+          <p class="stemp-3">
             2021年2月【馥薇】专业美容品牌线上小程序开启。
+          </p>
+          <p class="stemp-2">
+            2021年6月【馥薇】专业美容品牌线上小程序正式上线。
           </p>
           <p class="stemp-1">
             时间会见证我们的成长...
@@ -59,8 +56,8 @@
           <img class="dot-2" src="./assets/img/list_on.png" alt="" />
           <img class="dot-3" src="./assets/img/list_on.png" alt="" />
           <img class="dot-4 " src="./assets/img/list_on.png" alt="" />
-          <img class="dot-5 " src="./assets/img/list_on.png" alt="" />
-          <img class="dot-6 " src="./assets/img/list_on.png" alt="" />
+          <!--<img class="dot-5 " src="./assets/img/list_on.png" alt="" />
+          <img class="dot-6 " src="./assets/img/list_on.png" alt="" />-->
         </div>
       </div>
     </div>
@@ -128,6 +125,7 @@ export default {
       .fuwei_bg {
         height: 380px;
         position: absolute;
+        border-radius: 4px;
         left: 3%;
         z-index: 1;
       }
@@ -153,6 +151,7 @@ export default {
       }
       .content1 {
         position: absolute;
+        border-radius: 4px;
         width: 70%;
         padding: 20px;
         margin-top: 20px;
@@ -280,15 +279,15 @@ export default {
         }
         .dot-2,
         .stemp-2 {
-          top: 28%;
+          top: 37%;
         }
         .dot-3,
         .stemp-3 {
-          top: 42%;
+          top: 61%;
         }
         .dot-4,
         .stemp-4 {
-          top: 55%;
+          top: 86%;
         }
         .dot-5,
         .stemp-5 {
@@ -348,6 +347,7 @@ export default {
       height: 800px;
       transform: rotate(80deg);
       z-index: 1;
+      border-radius: 4px;
     }
     .story_content {
       position: absolute;
@@ -359,6 +359,7 @@ export default {
       background: rgba(255, 255, 255, 0.3);
       border-radius: 2px;
       z-index: 2;
+      border-radius: 4px;
       p {
         font-size: 18px;
         line-height: 30px;

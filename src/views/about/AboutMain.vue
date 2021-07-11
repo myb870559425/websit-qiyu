@@ -541,6 +541,7 @@ export default {
           padding-top: 20px;
           width: 100%;
           background: #fff;
+          border-radius: 4px;
           ul {
             width: 100%;
             // padding-bottom: 20px;
@@ -586,6 +587,7 @@ export default {
           background: #fff;
           flex-wrap: wrap;
           justify-content: space-between;
+          border-radius: 4px;
           .item-wrap {
             position: relative;
             .sign {

@@ -14,13 +14,38 @@
     <!-- 导航 -->
     <!-- <footer-router></footer-router> -->
     <div class="float__sign">
-      <img src="../assets/img/float__share.png" alt />
-      <img src="../assets/img/float__call.png" alt />
       <img
+        class="sign"
+        @mouseenter="accountIsshow = true"
+        @mouseleave="accountIsshow = false"
+        src="../assets/img/float__share.png"
+        alt
+      />
+      <img
+        class="sign"
+        @mouseenter="serviceIsshow = true"
+        @mouseleave="serviceIsshow = false"
+        src="../assets/img/float__call.png"
+        alt
+      />
+      <img
+        class="sign"
         v-show="backFlag"
         src="../assets/img/float__back.png"
         @click="backTop()"
         alt
+      />
+      <img
+        v-show="serviceIsshow"
+        class="service"
+        src="../assets/img/service.png"
+        alt="客服"
+      />
+      <img
+        v-show="accountIsshow"
+        class="officiaaccount"
+        src="../assets/img/official-account.jpg"
+        alt="公众号"
       />
     </div>
   </div>
@@ -31,7 +56,9 @@ import contentRouter from "@/views/MainContent/MainContent";
 export default {
   data() {
     return {
-      backFlag: false
+      backFlag: false,
+      serviceIsshow: false,
+      accountIsshow: false
     };
   },
   components: {
@@ -100,13 +127,25 @@ export default {
   flex-direction: column;
   align-items: flex-end;
   z-index: 99;
-  img {
+  .sign {
     display: inline-block;
     padding: 10px;
     width: 50px;
     margin-top: 5px;
     cursor: pointer;
     background: #fff;
+    border-radius: 4px;
+  }
+  .service {
+    position: absolute;
+    top: 60px;
+    width: 100px;
+    right: 53px;
+  }
+  .officiaaccount {
+    position: absolute;
+    width: 100px;
+    right: 53px;
   }
 }
 </style>

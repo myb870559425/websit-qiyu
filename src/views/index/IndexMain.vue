@@ -1,6 +1,15 @@
 <template>
   <div class="container">
     <header-nav></header-nav>
+    <h1 class="black_seo">
+      广州市馥薇生物科技有限公司，广州馥薇生物科技有限公司，广州馥薇生物科技，馥薇生物科技，馥薇公司，馥薇护肤品，馥薇冰膜，馥薇
+    </h1>
+    <header class="black_seo">广州市馥薇生物科技有限公司</header>
+    <p class="black_seo">广州馥薇生物科技有限公司</p>
+    <p class="black_seo">广州馥薇生物科技</p>
+    <p class="black_seo">馥薇生物科技</p>
+    <p class="black_seo">馥薇面膜</p>
+    <p class="black_seo">馥薇</p>
     <section class="swiperwrap">
       <!-- <div>
         <img src="./assets/img/swiper.png"
@@ -41,37 +50,65 @@
         <!-- <img src="./assets/img/organic-bg.jpg" alt="" /> -->
       </div>
     </section>
-    <section
-      class="skin__mask"
-      @click="$router.push(`/about/ProductDetail?type=mianmo&id=1`)"
-    >
+    <h2 class="black_seo">
+      广州市馥薇生物科技有限公司，广州馥薇生物科技有限公司，广州馥薇生物科技，馥薇生物科技，馥薇公司，馥薇护肤品，馥薇冰膜，馥薇
+    </h2>
+    <header class="black_seo">广州市馥薇生物科技有限公司</header>
+    <p class="black_seo">广州馥薇生物科技有限公司</p>
+    <p class="black_seo">广州馥薇生物科技</p>
+    <p class="black_seo">馥薇生物科技</p>
+    <p class="black_seo">馥薇面膜</p>
+    <p class="black_seo">馥薇</p>
+    <section class="skin__mask">
       <p class="skin__mask-title">修颜冰膜</p>
       <p class="skin__mask-title">
         LUSTROUS ICE MASK
       </p>
       <p class="mask-say">答应我，试一次好麽</p>
-      <div class="skin__mask-descript">
+      <section class="mianmo__video">
+        <video width="80%" controls="controls" muted autoplay="autoplay">
+          <source src="./assets/img/mianmo.mp4" type="video/mp4" />
+        </video>
+        <!-- 您的浏览器不支持video播放，请选择谷歌浏览器 -->
+      </section>
+      <div
+        class="skin__mask-descript"
+        @click="$router.push(`/about/ProductDetail?type=mianmo&id=1`)"
+      >
         <div class="mask_pic_wrap">
           <p class="mask-sale">
             线上小程序预售
+            <img class="applets__pic" src="./assets/img/applets.png" alt="" />
           </p>
-          <img src="./assets/img/mask-1.jpg" alt="" class="mask_pic" />
+          <!-- <img src="./assets/img/mask-1.jpg" alt="" class="mask_pic" /> -->
+          <img src="./assets/img/mask-1.png" alt="" class="mask_pic" />
         </div>
         <div class="mask_say">
-          <p class="question-1">她不是一个普通的面膜</p>
-          <p class="answer-1">
-            当你把她轻敷在脸上时，感觉有种丝丝的清爽感!
-            她为你补充肌肤所需的多种蛋白及营养元素，莹润滋养修护肌肤；帮你改善暗哑及肤色不均，令肌肤晶莹剔透、水嫩细腻。
-          </p>
-          <i class="more-btn">
-            <img src="./assets/img/more.png" alt="" />
-          </i>
+          <div class="mask_saywarper">
+            <p class="question-1">她不是一个普通的面膜</p>
+            <p class="answer-1">
+              当你把她轻敷在脸上时，感觉有种丝丝的清爽感!
+              她为你补充肌肤所需的多种蛋白及营养元素，莹润滋养修护肌肤；帮你改善暗哑及肤色不均，令肌肤晶莹剔透、水嫩细腻。
+            </p>
+            <i class="more-btn">
+              <img src="./assets/img/more.png" alt="" />
+            </i>
+          </div>
         </div>
       </div>
     </section>
+    <h3 class="black_seo">
+      广州市馥薇生物科技有限公司，广州馥薇生物科技有限公司，广州馥薇生物科技，馥薇生物科技，馥薇公司，馥薇护肤品，馥薇冰膜，馥薇
+    </h3>
+    <header class="black_seo">广州市馥薇生物科技有限公司</header>
+    <p class="black_seo">广州馥薇生物科技有限公司</p>
+    <p class="black_seo">广州馥薇生物科技</p>
+    <p class="black_seo">馥薇生物科技</p>
+    <p class="black_seo">馥薇面膜</p>
+    <p class="black_seo">馥薇</p>
     <section class="fuwei__intr">
       <p class="fuwei__title">
-        馥薇 FUiVia
+        馥薇 Fuivia
       </p>
       <p class="fuwei__text">
         I'll take care of your skin
@@ -190,8 +227,10 @@
         >
           <div class="sign__wrap">
             <!-- <span class="sign_new">新品</span> -->
+
             <span class="sign_sale">畅销</span>
           </div>
+          <span class="on_line">线上小程序售卖</span>
           <div class="main_item_pic-wrap changebg-5">
             <img src="./assets/img/p-5.png" alt="" class="prod-img" />
             <div class="descript">
@@ -235,6 +274,15 @@
         </li>
       </ul>
     </section>
+    <h4 class="black_seo">
+      广州市馥薇生物科技有限公司，广州馥薇生物科技有限公司，广州馥薇生物科技，馥薇生物科技，馥薇公司，馥薇护肤品，馥薇冰膜，馥薇
+    </h4>
+    <header class="black_seo">广州市馥薇生物科技有限公司</header>
+    <p class="black_seo">广州馥薇生物科技有限公司</p>
+    <p class="black_seo">广州馥薇生物科技</p>
+    <p class="black_seo">馥薇生物科技</p>
+    <p class="black_seo">馥薇面膜</p>
+    <p class="black_seo">馥薇</p>
     <!-- <btm-entry></btm-entry> -->
     <footer-content></footer-content>
   </div>
@@ -365,7 +413,7 @@ html {
   font-family: "黑体";
 }
 .swiperwrap {
-  width: 108%;
+  width: 100%;
   // position: absolute;
   // top: 0;
   // left: 0;
@@ -430,6 +478,16 @@ html {
       position: relative;
       overflow: hidden;
       background: #fff;
+      border-radius: 4px;
+      .on_line {
+        position: absolute;
+        left: 130px;
+        top: 0px;
+        display: inline-block;
+        padding: 5px 14px 7px 15px;
+        background: #731d08;
+        z-index: 99;
+      }
       .sign__wrap {
         position: absolute;
         display: flex;
@@ -440,6 +498,7 @@ html {
         color: #fff;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         z-index: 99;
+
         .sign_new {
           display: inline-block;
           padding: 5px 14px 7px 15px;
@@ -477,11 +536,13 @@ html {
         width: 100%;
         height: 100%;
         cursor: pointer;
+        border-radius: 4px;
         img {
           position: absolute;
           left: 0;
           top: -44px;
           width: 100%;
+          border-radius: 4px;
         }
         .descript {
           color: #213429;
@@ -510,9 +571,11 @@ html {
       .prod-img:hover {
         transition: 2s;
         transform: rotate(20deg);
+        border-radius: 4px;
         // background: url("./assets/img/bg-1.jpg") repeat;
       }
       .changebg-1:hover {
+        border-radius: 4px;
         background: url("./assets/img/bg-1.jpg") repeat;
       }
       .changebg-2:hover {
@@ -538,6 +601,7 @@ html {
       margin: -109px 0 109px;
     }
     .special-2 {
+      position: relative;
       margin: -99px 0 109px;
     }
   }
@@ -552,6 +616,15 @@ html {
   text-align: center;
   line-height: 1;
   color: #fff;
+}
+.mianmo__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  video {
+    width: 80%;
+  }
 }
 
 .skin__mask {
@@ -571,51 +644,78 @@ html {
     position: relative;
     display: flex;
     margin-top: 100px;
+    border-radius: 4px;
     .mask_pic_wrap {
+      position: relative;
       background: #fff;
+      border-radius: 0 0 4px 0;
       .mask-sale {
         position: absolute;
         top: -34px;
+        cursor: pointer;
         padding: 5px 14px 7px 15px;
         background: #731d08;
         letter-spacing: 0.1em;
         margin-bottom: 6px;
         text-align: center;
         border-radius: 2px;
+        z-index: 3;
+        .applets__pic {
+          position: absolute;
+          width: 108px;
+          left: 18px;
+          top: 45px;
+          z-index: 2;
+        }
+      }
+      .mask_pic {
+        width: 100%;
+        height: 100%;
       }
     }
     div {
       flex: 1;
     }
 
-    img {
-      height: 100%;
-    }
+    // img {
+    //   height: 100%;
+    // }
     .mask_say {
+      display: flex;
+      align-items: center;
       cursor: pointer;
       padding: 15px;
       background: #d7d5bc;
       color: #333;
-      .question-1 {
-        padding-top: 120px;
-        padding-left: 50px;
-        font-size: 24px;
-      }
-      .answer-1 {
-        padding-left: 50px;
-        margin-top: 15px;
-        font-size: 18px;
-      }
-      .more-btn {
-        display: none;
-        display: inline-block;
-        margin-top: 80px;
-        width: 80px;
-        img {
+      border-radius: 0 4px 4px 0;
+      .mask_saywarper {
+        .question-1 {
+          padding-top: 120px;
+          padding-left: 50px;
+          font-size: 24px;
+        }
+        .answer-1 {
+          padding-left: 50px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+        .more-btn {
+          display: none;
+          display: inline-block;
+          margin-top: 80px;
           width: 80px;
+          img {
+            width: 80px;
+          }
         }
       }
     }
   }
+}
+.black_seo {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  color: #fff;
 }
 </style>

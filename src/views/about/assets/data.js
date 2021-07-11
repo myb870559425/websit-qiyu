@@ -22,7 +22,7 @@ const detailData = [
       }
     ],
     prodComponent:
-      "抗坏血酸葡糖苷、燕麦β-葡聚糖、三色革提取物、麦冬提取物、白茅根提取物、葡萄籽提取 物、谷胱甘肽、木糖醇基葡糖苷、黄瓜 提取物。",
+      "水,甘油,丁二醇,1,3-丙二醇,抗坏血酸葡糖苷,赤藓醇,玉米谷蛋白氨基酸类,海藻糖,燕麦（AVENA SATIVA）β-葡聚糖,三色堇（VIOLA TRICOLOR）提取物,绿豆（PHASEOLUS RADIATUS）籽提取物,辣薄荷（MENTHA PIPERITA）提取物,谷胱甘肽,木糖醇基葡糖苷,脱水木糖醇,木糖醇,卡波姆,精氨酸,透明质酸,尿囊素,聚谷氨酸。",
     prodStandards: "10片/盒"
   },
   {
@@ -707,7 +707,7 @@ const detailData = [
         feature: " 4、打开肌肤泉眼的金钥匙，干燥皮肤必备的营养饮品。"
       }
     ],
-    prodComponent: "白花百合花提取物、三肽-1、乙酰基六肽-8。",
+    prodComponent: "水、白花百合花提取物、乙酰基六肽-8、丁二醇。",
     prodStandards: "35ml"
   },
   {
